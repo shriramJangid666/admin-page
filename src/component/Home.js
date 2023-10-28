@@ -125,32 +125,32 @@ function Home() {
           Delete Selected
         </button>
         <nav className="flex items-center">
-          <ul className="pagination flex space-x-2">
-            <li className="pagination-item">
+          <ul className="flex space-x-2">
+            <li>
               <a
                 href="#"
                 onClick={prevPage}
-                className={`pagination-link ${currentPage === 1 ? 'pagination-disabled' : 'pagination-active'}`}
+                className={`cursor-pointer ${currentPage === 1 ? 'text-gray-400' : 'text-blue-600'}`}
               >
                 {"<"}
               </a>
             </li>
             {numbers.map((n, i) => (
-              <li key={i} className="pagination-item">
+              <li key={i}>
                 <a
                   href="#"
                   onClick={() => changeCurrentPage(n)}
-                  className={`pagination-link ${currentPage === n ? 'pagination-active' : ''}`}
+                  className={`cursor-pointer ${currentPage === n ? 'text-blue-600' : 'text-gray-400'}`}
                 >
                   {n}
                 </a>
               </li>
             ))}
-            <li className="pagination-item">
+            <li>
               <a
                 href="#"
                 onClick={nextPage}
-                className={`pagination-link ${currentPage === nPage ? 'pagination-disabled' : 'pagination-active'}`}
+                className={`cursor-pointer ${currentPage === nPage ? 'text-gray-400' : 'text-blue-600'}`}
               >
                 {">"}
               </a>
